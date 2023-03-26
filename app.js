@@ -23,6 +23,11 @@ app.use(methodOverride(function (req, res) {
 
 let todolist = [];
 
+app.get('/', (req, res) => {
+    res.send('<h1>Hello World!</h1>')
+})
+
+
 /* The to do list and the form are displayed */
 app.get('/todo', function (req, res) {
         res.render('todo.ejs', {
